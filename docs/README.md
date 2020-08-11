@@ -25,6 +25,7 @@ Instance creation and user login is required to use the modules of the SDK
 Creates an instance to interact with the API
 <br>
 <br>
+
 **Parameters**
 <br>
  1. Object <br>
@@ -60,6 +61,7 @@ TubuIO.login({
 Creates an instance to interact with the API
 <br>
 <br>
+
 **Parameters**
 <br>
  1. Dictionary <br>
@@ -76,6 +78,7 @@ tubuio_user =  new TubuIO({
 Logs in to the API using the username and password
 <br>
 <br>
+
 **Parameters**
 <br>
  1. dict - User credentials stored in dictionary for logging in <br>
