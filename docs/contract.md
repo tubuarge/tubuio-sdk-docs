@@ -197,17 +197,43 @@ Deploys a contract in the network with given networkID using the contractDetails
 
 **Parameters**
 <br>
- 1. int - The ID of the Network that app is going to be created in <br>
- 2. dict - The name, description and application id of the contract that is going to be deployed <br>
+ 1. int - networkID: The network id of the contract is going to be deployed in <br>
+ 2. dict - contractDetails:  The detailed information of the contract 
+    1. string - name: The name of the contract 
+    2. string - description: The description of the contract
+    3. int - appID: The application id of the contract which is going to be deployed in
+    4. array - files: The filepath of the contracts which is stored in an array
+    5. array - args: The args of the contract
+
+**Returns**
+<br>
+
+1. dict - response : The information of the deployed contract stored in dictionary  
+    1. string - message: The contract deploy status 
+    2. dict - data: The contract data 
+        1. int - id: The contract id 
+        2. string - name: The contract name 
+        3. string - description: The contract description 
+        4. string - short_id: The short id of the contract 
+        5. string - contract_address: The owner id of the application 
+        6. string - updated_at: The contract update timestamp 
+        7. string - created_at: The contract create timestamp 
+
+**Example**
+<br>
 
 ```python
-
-TubuIO.contract.deploy(8, {
-    name: "Sample App"
-    description: "Description of the Sample App"
-    appID: "8"
+TubuIO.contract.deploy(networkID=8, {
+    name: "Stars.sol"
+    description: "Description"
+    appID: 8
+    files: ["..\\contracts\\Stars.sol", ...]
+    args: "Contract"
 })
+
+> {'message': 'Contract created', 'data': {'id': 60, 'name': 'Stars.sol', 'description': 'Description', 'short_id': '1d81c392a3cd',...}}
 ```
+
 <br>
 <br>
 
@@ -219,22 +245,37 @@ The method to get the current user's contracts on the specific network.
 
 **Parameters**
 <br>
- 1. int - The ID of the Network that app is going to be created in <br>
- 2. dict - The page, page size and application id of the contract that is going to be obtained <br>
+ 1. int - networkID: The network id of the contract is going to be deployed in <br>
+ 2. dict - pageDetails:  The detailed information of the page 
+    1. int - page: The page number of the contracts 
+    2. int - pageSize: The page size of the contracts
+    3. int - appID: The application id of the contracts
+
+
+**Returns**
+<br>
+
+1. array - data : The array of all contract dictionaries 
+
+**Example**
+<br>
 
 ```python
 
 TubuIO.contract.getAll(8, {
-    page: "1"
-    page_size: "100"
-    app_id: "8"
+    page: 1
+    page_size: 100
+    app_id: 8
 })
+
+> [{'id': 42, 'name': 'Stars.sol', 'description': 'Channel Contract', 'short_id': 'e0e9fa97dac2', ...}, {...}, ...]
 ```
 
+
 <br>
 <br>
 
-**contract.getByShortId(contractDetails)**
+**contract.get(networkID, shortID)**
 <br>
 The method to get the current user's specific contract on the specific network using the networkID and shortID.
 <br>
@@ -242,14 +283,24 @@ The method to get the current user's specific contract on the specific network u
 
 **Parameters**
 <br>
- 1. dict - The network id and the short contract id of the contract that is going to be obtained <br>
+ 1. int - networkID: The network id of the contract is going to be deployed in <br>
+ 2. string - shortID: The short id of the contract <br>
+
+**Returns**
+<br>
+
+1. array - data : The array of all contract dictionaries 
+
+**Example**
+<br>
+
 
 ```python
 
-TubuIO.contract.getByShortId({
-    networkID: "2"
-    shortID: "sad1231"
-})
+TubuIO.contract.getByShortId(
+    networkID=2,
+    shortID="sad1231"
+)
 ```
 
 <br>

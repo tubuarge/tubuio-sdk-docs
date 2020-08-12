@@ -53,34 +53,26 @@ Fetches all the networks of the current user
 
 **Parameters**
 <br>
-<ol>
-<li> dict - options: The options of the page
-<ol> 
-<li> int - page: The page number of all networks </li>
-<li> int - pageSize: The page size of all networks </li>
-</ol>
-</li>
-</ol>
+1. dict - options: The options of the page
+    1. int - page: The page number of all networks 
+    2. int - pageSize: The page size of all networks 
 
-```python
-
-TubuIO.network.getAll({
-    page: 1,
-    pageSize: 100
-})
-
-```
 <br>
 
 **Returns**
 <br>
-<ol>
-<li> array - data : The array of all network dictionaries </li>
-</ol>
- 
+1. array - data : The array of all network dictionaries 
+
+**Example**
+
 ```python
 
-data = [{'id': 1, 'name': 'Test Quorum Network', 'bctype': 'Quorum', 'consensus': 'raft', ... , 'version': '2.3.0', ...}, {...}, ...]
+TubuIO.network.getAll(options={
+    page: 1,
+    pageSize: 100
+})
+
+> [{'id': 1, 'name': 'Test Quorum Network', 'bctype': 'Quorum', 'consensus': 'raft', ... , 'version': '2.3.0', ...}, {...}, ...]
 
 ```
 <br>
@@ -94,48 +86,35 @@ Fetches the network of the user with the given ID
 
 **Parameters**
 <br>
-<ol>
-<li> int - networkID: The ID of the Network that is going to be fetched </li>
-</ol>
-
-```python
-
-network = TubuIO.network.get(14)
-
-```
-
+1. int - networkID: The ID of the Network that is going to be fetched 
 <br>
 
 **Returns**
 <br>
-<ol>
-<li> dict - data : The information of the specific network stored in dictionary 
-<ol> 
-<li> int - id: The network id </li>
-<li> string - name: The network name </li>
-<li> string - bctype: The network blockchain type </li>
-<li> string - version: The network blockchain version </li>
-<li> string - consensus: The network consensus type </li>
-<li> string - ip_address: The network ip address </li>
-<li> int - ws_port: The network ws port </li>
-<li> bool - is_public: The network blockchain access type </li>
-<li> int - owner_id: The owner id </li>
-<li> string - updated_at: The network update timestamp </li>
-<li> string - created_at: The network create timestamp </li>
-<li> dict - chain : The information of the specific network stored in dictionary 
-<ol>
-<li> int - blockCount: The block count of the blockchain </li>
-<li> int - chainId: The blockchain id </li>
-<li> string - nodeInfo: The information of blockchain </li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
- 
+
+1. dict - data : The information of the specific network stored in dictionary 
+    1. int - id: The network id 
+    2. string - name: The network name 
+    3. string - bctype: The network blockchain type 
+    4. string - version: The network blockchain version 
+    5. string - consensus: The network consensus type 
+    6. string - ip_address: The network ip address 
+    7. int - ws_port: The network ws port 
+    8. bool - is_public: The network blockchain access type 
+    9. int - owner_id: The owner id 
+    10. string - updated_at: The network update timestamp 
+    11. string - created_at: The network create timestamp 
+    12. dict - chain : The information of the specific network stored in dictionary 
+        1. int - blockCount: The block count of the blockchain 
+        2. int - chainId: The blockchain id 
+        3. string - nodeInfo: The information of blockchain 
+
+**Example**
 ```python
 
-data = {'id': 2, 'name': 'TUBU - Quorum Network', 'bctype': 'Quorum', 'version': '2.6.0', ..., 'chain': {...}}}
+network = TubuIO.network.get(networkID=14)
+
+> {'id': 14, 'name': 'TUBU - Quorum Network', 'bctype': 'Quorum', 'version': '2.6.0', ..., 'chain': {...}}}
 
 ```
 <br>

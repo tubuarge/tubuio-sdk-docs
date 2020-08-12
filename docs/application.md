@@ -111,48 +111,35 @@ Creates an application in the network with given networkID using the appDetails
 
 **Parameters**
 <br>
-<ol>
-<li> int - networkID: The network id </li>
-<li> dict - appDetails: The detailed information of the application 
-<ol> 
-<li> string - name: The name of the application </li>
-<li> string - description: The description of the application </li>
-</ol>
-</li>
-</ol>
+1. int - networkID: The network id of the app which is going to be created in
+2. dict - appDetails: The detailed information of the application 
+    1. string - name: The name of the application 
+    2. string - description: The description of the application 
 
-```python
-
-TubuIO.application.create(8, {
-    name: "Sample App"
-    description: "Description of the Sample App"
-})
-```
 <br>
 
 **Returns**
 <br>
-<ol>
-<li> dict - response : The information of the specific network stored in dictionary 
-<ol> 
-<li> string - message: The application creation status </li>
-<li> dict - data: The application data 
-<ol>
-<li> int - id: The application id </li>
-<li> string - name: The application name </li>
-<li> string - description: The application description </li>
-<li> int - network_id: The network id of the application </li>
-<li> int - owner_id: The owner id of the application </li>
-<li> string - updated_at: The network update timestamp </li>
-<li> string - created_at: The network create timestamp </li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
 
+1. dict - response : The information of the created application stored in dictionary  
+    1. string - message: The application creation status 
+    2. dict - data: The application data 
+        1. int - id: The application id 
+        2. string - name: The application name 
+        3. string - description: The application description 
+        4. int - network_id: The network id of the application 
+        5. int - owner_id: The owner id of the application 
+        6. string - updated_at: The application update timestamp 
+        7. string - created_at: The application create timestamp 
+
+**Example**
 ```python
-token = "askdsakdqıoweıq12314.1313qsodlqkldasnd..."
+TubuIO.application.create(networkID=8, appDetails={
+    name: "Sample App"
+    description: "Description of the Sample App"
+})
+
+> {'message': 'Application created', 'data': {'id': 39, 'name': 'Meow', 'description': 'Example', 'network_id': 8, ..., }}
 ```
 
 **application.getAll(networkID, options)**
@@ -163,91 +150,132 @@ The method to get the current user's applications on the specific network.
 
 **Parameters**
 <br>
-<ol>
-<li> int - networkID: The network id of the apps are going to be queried in </li>
-<li> dict - options: The options of the page
-<ol> 
-<li> int - page: The page number of all networks </li>
-<li> int - pageSize: The page size of all networks </li>
-</ol>
-</li>
-</ol>
- 
-```python
 
-TubuIO.application.getAll(8, {
+1. int - networkID: The network id of the apps are going to be queried in <br>
+2. dict - options: The options of the page <br>
+    1. int - page: The page number of all networks <br>
+    2. int - pageSize: The page size of all networks <br>
+
+<br>
+
+**Returns**
+<br>
+
+1. array - data : The array of all application dictionaries 
+
+
+**Example**
+
+```python
+TubuIO.application.getAll(networkID=8, options={
     page: 1,
     pageSize: 100
 })
+
+> [{'id': 31, 'name': 'Stars', 'description': 'Channel Contract', 'network_id': 8, 'owner_id': 15, ..., ...}, {...},]
+
+```
+<br>
+
+**application.get(networkID, appID)**
+<br>
+The method to get the current user's specific application on the specific network using the networkID and appID.
+<br>
+<br>
+
+**Parameters**
+<br>
+ 1. int - networkID: The network id of the specific app which is going to be queried in <br>
+ 2. int - applicationID: The ID of the application that is to be queried <br>
+
+```python
+
+
 ```
 
 <br>
 
 **Returns**
 <br>
-<ol>
-<li> array - data : The array of all application dictionaries </li>
-</ol>
- 
+1. dict - data: The application data 
+    1. int - id: The application id 
+    2. string - name: The application name 
+    3. string - description: The application description 
+    4. int - network_id: The network id of the application 
+    5. int - owner_id: The owner id of the application 
+    6. string - updated_at: The application update timestamp 
+    7. string - created_at: The application create timestamp 
+
+**Example**
 ```python
 
-data = [{'id': 31, 'name': 'Stars', 'description': 'Channel Contract', 'network_id': 2, 'owner_id': 15, ..., ...}, {...},]
+TubuIO.application.get(networkID=8, appID=6)
+
+> {'id': 31, 'name': 'Star', 'description': 'TV Kanal', 'network_id': 8, 'owner_id': 15, ...}
 
 ```
 <br>
 
-**application.getApp(networkID, appID)**
-<br>
-The method to get the current user's specific application on the specific network using the networkID and appID.
-<br>
-<br>
-
-**Parameters**
-<br>
- 1. int - The ID of the Network that app is going to be created in <br>
- 2. int - The ID of the Application that is to be queried <br>
-
-```python
-
-TubuIO.application.getApp(8, 6)
-```
-
-<br>
-
-**application.updateApp(networkID, appID, updateDetails)**
+**application.update(networkID, appID, updateDetails)**
 <br>
 The method to update the current user's specific application on the specific network using the networkID and appID.
 <br>
 <br>
+
 **Parameters**
 <br>
- 1. int - The ID of the Network that app is going to be created in <br>
- 2. int - The ID of the Application that is to be queried <br>
- 3. dict - The new name and description of the app that is going to be updated <br>
+ 1. int - networkID: The network id of the specific app which is going to be updated in <br>
+ 2. int - applicationID: The ID of the application that is to be updated <br>
+ 3. dict - updateDetails: The new name and description of the app that is going to be updated <br>
+    1. string - name: The application name which is going to be updated <br>
+    2. string - description: The application description which is going to be updated <br>
+
+**Returns**
+<br>
+1. dict - response : The information of the updated application stored in dictionary  
+    1. string - message: The application update status 
+    2. dict - data: The application data 
+        1. int - id: The application id 
+        2. string - name: The updated application name 
+        3. string - description: The updated application description 
+        4. int - network_id: The network id of the application 
+        5. int - owner_id: The owner id of the application 
+        6. string - updated_at: The application update timestamp 
+        7. string - created_at: The application create timestamp 
+
+**Example**
 
 ```python
 
-TubuIO.application.updateApp(8, 6, {
+TubuIO.application.updateApp(networkID=8, appID=6, {
     name: "Sample App"
-    description: "Description of the Sample App"
+    description: "Description"
 })
+
+> {'message': 'Application with 6 id updated', 'data': {'id': 6, 'name': 'Sample App', 'description': 'Description', 'network_id': 8, ...}
 ```
 
 <br>
 
 **application.deleteApp(networkID, appID)**
 <br>
-The method to get the current user's specific application on the specific network using the networkID and appID.
+The method to delete the current user's specific application on the specific network using the networkID and appID.
 <br>
 <br>
+
 **Parameters**
+1. int - networkID: The network id of the specific app which is going to be deleted in <br>
+2. int - appID: The application id of the app which is going to be deleted <br>
+
+**Returns**
 <br>
- 1. int - The ID of the Network that app is going to be created in <br>
- 2. int - The ID of the Application that is to be queried <br>
+1. string - status : The status of the deletion of the application  
 
 ```python
 
-TubuIO.application.deleteApp(8, 6)
+TubuIO.application.deleteApp(networkID=8, appID=6)
+
+> "The application 6 is deleted successfully."
 ```
 
 <!-- tabs:end -->

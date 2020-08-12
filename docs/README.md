@@ -77,32 +77,24 @@ Logs in to the API using the username and password
 
 **Parameters**
 <br>
-<ol>
-<li>
- dict - credentials: User credentials stored in dictionary for logging in <br>
- <ol>
- <li> string - username: The username of current user</li>
- <li> string - password: The password of current user</li>
- </ol>
- </li>
- </ol>
+ 1. dict - credentials: User credentials stored in dictionary for logging in <br>
+    1. string - username: The username of current user
+    2. string - password: The password of current user
 
-```python
-tubuio_user.login({
-    username: 'user1',
-    password: 'password1'
-})
-```
 <br>
 
 **Returns**
 <br>
-<ol>
-<li> string - token: The user token </li>
-</ol>
+1. string - token: The user token 
 
+
+**Example**
 ```python
-token = "askdsakdqıoweıq12314.1313qsodlqkldasnd..."
+tubuio_user.login(credentials={
+    username: 'user1',
+    password: 'password1'
+})
+> "askdsakdqıoweıq12314.1313qsodlqkldasnd..."
 ```
 
 <!-- tabs:end -->
