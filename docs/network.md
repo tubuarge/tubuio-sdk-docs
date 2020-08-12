@@ -53,15 +53,15 @@ Fetches all the networks of the current user
 
 **Parameters**
 <br>
-1. dict - options: The options of the page
-    1. int - page: The page number of all networks 
-    2. int - pageSize: The page size of all networks 
+1. dict - options: The options of the page <br>
+    1. int - page: The page number of all networks <br> 
+    2. int - pageSize: The page size of all networks <br>
 
 <br>
 
 **Returns**
 <br>
-1. array - data : The array of all network dictionaries 
+1. array - data : The array of all network dictionaries <br>
 
 **Example**
 
@@ -86,28 +86,28 @@ Fetches the network of the user with the given ID
 
 **Parameters**
 <br>
-1. int - networkID: The ID of the Network that is going to be fetched 
+1. int - networkID: The ID of the Network that is going to be fetched <br>
 <br>
 
 **Returns**
 <br>
 
-1. dict - data : The information of the specific network stored in dictionary 
-    1. int - id: The network id 
-    2. string - name: The network name 
-    3. string - bctype: The network blockchain type 
-    4. string - version: The network blockchain version 
-    5. string - consensus: The network consensus type 
-    6. string - ip_address: The network ip address 
-    7. int - ws_port: The network ws port 
-    8. bool - is_public: The network blockchain access type 
-    9. int - owner_id: The owner id 
-    10. string - updated_at: The network update timestamp 
-    11. string - created_at: The network create timestamp 
-    12. dict - chain : The information of the specific network stored in dictionary 
-        1. int - blockCount: The block count of the blockchain 
-        2. int - chainId: The blockchain id 
-        3. string - nodeInfo: The information of blockchain 
+1. dict - data : The information of the specific network stored in dictionary <br>
+    1. int - id: The network id <br>
+    2. string - name: The network name <br>
+    3. string - bctype: The network blockchain type <br>
+    4. string - version: The network blockchain version <br>
+    5. string - consensus: The network consensus type <br>
+    6. string - ip_address: The network ip address <br>
+    7. int - ws_port: The network ws port <br> 
+    8. bool - is_public: The network blockchain access type <br>
+    9. int - owner_id: The owner id <br>
+    10. string - updated_at: The network update timestamp <br>
+    11. string - created_at: The network create timestamp <br>
+    12. dict - chain : The information of the specific network stored in dictionary <br>
+        1. int - blockCount: The block count of the blockchain <br>
+        2. int - chainId: The blockchain id <br>
+        3. string - nodeInfo: The information of blockchain <br>
 
 **Example**
 ```python

@@ -111,26 +111,26 @@ Creates an application in the network with given networkID using the appDetails
 
 **Parameters**
 <br>
-1. int - networkID: The network id of the app which is going to be created in
-2. dict - appDetails: The detailed information of the application 
-    1. string - name: The name of the application 
-    2. string - description: The description of the application 
+1. int - networkID: The network id of the app which is going to be created in <br>
+2. dict - appDetails: The detailed information of the application <br>
+    1. string - name: The name of the application <br>
+    2. string - description: The description of the application <br>
 
 <br>
 
 **Returns**
 <br>
 
-1. dict - response : The information of the created application stored in dictionary  
-    1. string - message: The application creation status 
-    2. dict - data: The application data 
-        1. int - id: The application id 
-        2. string - name: The application name 
-        3. string - description: The application description 
-        4. int - network_id: The network id of the application 
-        5. int - owner_id: The owner id of the application 
-        6. string - updated_at: The application update timestamp 
-        7. string - created_at: The application create timestamp 
+1. dict - response : The information of the created application stored in dictionary  <br>
+    1. string - message: The application creation status <br>
+    2. dict - data: The application data <br>
+        1. int - id: The application id <br>
+        2. string - name: The application name <br>
+        3. string - description: The application description <br>
+        4. int - network_id: The network id of the application <br>
+        5. int - owner_id: The owner id of the application <br>
+        6. string - updated_at: The application update timestamp <br> 
+        7. string - created_at: The application create timestamp <br>
 
 **Example**
 ```python
@@ -161,7 +161,7 @@ The method to get the current user's applications on the specific network.
 **Returns**
 <br>
 
-1. array - data : The array of all application dictionaries 
+1. array - data : The array of all application dictionaries <br>
 
 
 **Example**
@@ -187,24 +187,19 @@ The method to get the current user's specific application on the specific networ
 <br>
  1. int - networkID: The network id of the specific app which is going to be queried in <br>
  2. int - applicationID: The ID of the application that is to be queried <br>
-
-```python
-
-
-```
-
+ 
 <br>
 
 **Returns**
 <br>
-1. dict - data: The application data 
-    1. int - id: The application id 
-    2. string - name: The application name 
-    3. string - description: The application description 
-    4. int - network_id: The network id of the application 
-    5. int - owner_id: The owner id of the application 
-    6. string - updated_at: The application update timestamp 
-    7. string - created_at: The application create timestamp 
+1. dict - data: The application data <br>
+    1. int - id: The application id  <br>
+    2. string - name: The application name <br>
+    3. string - description: The application description <br>
+    4. int - network_id: The network id of the application <br>
+    5. int - owner_id: The owner id of the application <br>
+    6. string - updated_at: The application update timestamp <br> 
+    7. string - created_at: The application create timestamp <br>
 
 **Example**
 ```python
@@ -232,16 +227,16 @@ The method to update the current user's specific application on the specific net
 
 **Returns**
 <br>
-1. dict - response : The information of the updated application stored in dictionary  
-    1. string - message: The application update status 
-    2. dict - data: The application data 
-        1. int - id: The application id 
-        2. string - name: The updated application name 
-        3. string - description: The updated application description 
-        4. int - network_id: The network id of the application 
-        5. int - owner_id: The owner id of the application 
-        6. string - updated_at: The application update timestamp 
-        7. string - created_at: The application create timestamp 
+1. dict - response : The information of the updated application stored in dictionary  <br>
+    1. string - message: The application update status <br>
+    2. dict - data: The application data <br>
+        1. int - id: The application id <br>
+        2. string - name: The updated application name <br>
+        3. string - description: The updated application description <br>
+        4. int - network_id: The network id of the application <br>
+        5. int - owner_id: The owner id of the application <br>
+        6. string - updated_at: The application update timestamp <br> 
+        7. string - created_at: The application create timestamp <br>
 
 **Example**
 
@@ -257,7 +252,7 @@ TubuIO.application.updateApp(networkID=8, appID=6, {
 
 <br>
 
-**application.deleteApp(networkID, appID)**
+**application.delete(networkID, appID)**
 <br>
 The method to delete the current user's specific application on the specific network using the networkID and appID.
 <br>
@@ -269,11 +264,13 @@ The method to delete the current user's specific application on the specific net
 
 **Returns**
 <br>
-1. string - status : The status of the deletion of the application  
+1. string - status : The status of the deletion of the application <br>
+
+**Example**
 
 ```python
 
-TubuIO.application.deleteApp(networkID=8, appID=6)
+TubuIO.application.delete(networkID=8, appID=6)
 
 > "The application 6 is deleted successfully."
 ```
