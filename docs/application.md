@@ -134,10 +134,13 @@ Creates an application in the network with given networkID using the appDetails
 
 **Example**
 ```python
-TubuIO.application.create(networkID=8, appDetails={
-    name: "Sample App"
-    description: "Description of the Sample App"
-})
+TubuIO.application.create(
+    networkID=8, 
+    appDetails={
+        name: "Meow"
+        description: "Example"
+    }
+)
 
 > {'message': 'Application created', 'data': {'id': 39, 'name': 'Meow', 'description': 'Example', 'network_id': 8, ..., }}
 ```
@@ -167,10 +170,13 @@ The method to get the current user's applications on the specific network.
 **Example**
 
 ```python
-TubuIO.application.getAll(networkID=8, options={
-    page: 1,
-    pageSize: 100
-})
+TubuIO.application.getAll(
+    networkID=8, 
+    options={
+        page: 1,
+        pageSize: 100
+    }
+)
 
 > [{'id': 31, 'name': 'Stars', 'description': 'Channel Contract', 'network_id': 8, 'owner_id': 15, ..., ...}, {...},]
 
@@ -204,9 +210,12 @@ The method to get the current user's specific application on the specific networ
 **Example**
 ```python
 
-TubuIO.application.get(networkID=8, appID=6)
+TubuIO.application.get(
+    networkID=8, 
+    appID=6
+)
 
-> {'id': 31, 'name': 'Star', 'description': 'TV Kanal', 'network_id': 8, 'owner_id': 15, ...}
+> {'id': 31, 'name': 'Star', 'description': 'Channel', 'network_id': 8, 'owner_id': 15, ...}
 
 ```
 <br>
@@ -242,10 +251,14 @@ The method to update the current user's specific application on the specific net
 
 ```python
 
-TubuIO.application.updateApp(networkID=8, appID=6, {
-    name: "Sample App"
-    description: "Description"
-})
+TubuIO.application.updateApp(
+    networkID=8, 
+    appID=6, 
+    updateDetails={
+        name: "Sample App",
+        description: "Description"
+    }
+)
 
 > {'message': 'Application with 6 id updated', 'data': {'id': 6, 'name': 'Sample App', 'description': 'Description', 'network_id': 8, ...}
 ```
@@ -270,7 +283,10 @@ The method to delete the current user's specific application on the specific net
 
 ```python
 
-TubuIO.application.delete(networkID=8, appID=6)
+TubuIO.application.delete(
+    networkID=8, 
+    appID=6
+)
 
 > "The application 6 is deleted successfully."
 ```

@@ -224,11 +224,11 @@ Deploys a contract in the network with given networkID using the contractDetails
 
 ```python
 TubuIO.contract.deploy(networkID=8, {
-    name: "Stars.sol"
-    description: "Description"
-    appID: 8
-    files: ["..\\contracts\\Stars.sol", ...]
-    args: "Contract"
+    name: "Stars.sol",
+    description: "Description",
+    appID: 8,
+    files: ["..\\contracts\\Stars.sol", ...],
+    args: "Contract",
 })
 
 > {'message': 'Contract created', 'data': {'id': 60, 'name': 'Stars.sol', 'description': 'Description', 'short_id': '1d81c392a3cd',...}}
@@ -263,9 +263,9 @@ The method to get the current user's contracts on the specific network.
 ```python
 
 TubuIO.contract.getAll(8, {
-    page: 1
-    page_size: 100
-    app_id: 8
+    page: 1,
+    page_size: 100,
+    app_id: 8,
 })
 
 > [{'id': 42, 'name': 'Stars.sol', 'description': 'Channel Contract', 'short_id': 'e0e9fa97dac2', ...}, {...}, ...]
@@ -342,7 +342,7 @@ The method to delete the current user's specific contract on the specific networ
 ```python
 
 TubuIO.contract.delete({
-    networkID: 2
+    networkID: 2,
     shortID: "sad1231"
 })
 
@@ -555,7 +555,9 @@ The method to get the current user's specific transaction using the transaction 
 **Example**    
 
 ```python
-TubuIO.contract.getTransaction("0xsadasqwe123131")
+TubuIO.contract.getTransaction(
+    transactionHash="0xsadasqwe123131"
+)
 
 > {'message': 'Transaction found', 'data': {'id': 71, 'user_id': 15, 'short_id': 'e6da40e5bc87', ...}}
 ```

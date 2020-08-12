@@ -96,10 +96,13 @@ Logs in to the API using the username and password
 
 **Example**
 ```python
-tubuio_user.login(credentials={
-    username: 'user1',
-    password: 'password1'
-})
+tubuio_user.login(
+    credentials={
+        username: 'user1',
+        password: 'password1'
+    }
+)
+
 > "askdsakdqıoweıq12314.1313qsodlqkldasnd..."
 ```
 

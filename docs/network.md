@@ -67,10 +67,12 @@ Fetches all the networks of the current user
 
 ```python
 
-TubuIO.network.getAll(options={
-    page: 1,
-    pageSize: 100
-})
+TubuIO.network.getAll(
+    options={
+        page: 1,
+        pageSize: 100
+    }
+)
 
 > [{'id': 1, 'name': 'Test Quorum Network', 'bctype': 'Quorum', 'consensus': 'raft', ... , 'version': '2.3.0', ...}, {...}, ...]
 
@@ -112,7 +114,9 @@ Fetches the network of the user with the given ID
 **Example**
 ```python
 
-network = TubuIO.network.get(networkID=14)
+TubuIO.network.get(
+    networkID=14
+)
 
 > {'id': 14, 'name': 'TUBU - Quorum Network', 'bctype': 'Quorum', 'version': '2.6.0', ..., 'chain': {...}}}
 
