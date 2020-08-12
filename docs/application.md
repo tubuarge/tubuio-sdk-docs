@@ -103,7 +103,7 @@ TubuIO.application.delete(8, 6)
 
 ### ** Python **
 
-**application.createApp(networkID, appDetails)**
+**application.create(networkID, appDetails)**
 <br>
 Creates an application in the network with given networkID using the appDetails
 <br>
@@ -111,19 +111,51 @@ Creates an application in the network with given networkID using the appDetails
 
 **Parameters**
 <br>
- 1. int - The ID of the Network that app is going to be created in <br>
- 2. dict - The name and description of the app that is going to be created <br>
+<ol>
+<li> int - networkID: The network id </li>
+<li> dict - appDetails: The detailed information of the application 
+<ol> 
+<li> string - name: The name of the application </li>
+<li> string - description: The description of the application </li>
+</ol>
+</li>
+</ol>
 
 ```python
 
-TubuIO.application.createApp(8, {
+TubuIO.application.create(8, {
     name: "Sample App"
     description: "Description of the Sample App"
 })
 ```
 <br>
 
-**application.getApps(networkID, appDetails)**
+**Returns**
+<br>
+<ol>
+<li> dict - response : The information of the specific network stored in dictionary 
+<ol> 
+<li> string - message: The application creation status </li>
+<li> dict - data: The application data 
+<ol>
+<li> int - id: The application id </li>
+<li> string - name: The application name </li>
+<li> string - description: The application description </li>
+<li> int - network_id: The network id of the application </li>
+<li> int - owner_id: The owner id of the application </li>
+<li> string - updated_at: The network update timestamp </li>
+<li> string - created_at: The network create timestamp </li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+
+```python
+token = "askdsakdqıoweıq12314.1313qsodlqkldasnd..."
+```
+
+**application.getAll(networkID, options)**
 <br>
 The method to get the current user's applications on the specific network.
 <br>
@@ -131,17 +163,37 @@ The method to get the current user's applications on the specific network.
 
 **Parameters**
 <br>
- 1. int - The ID of the Network that app is going to be created in <br>
- 2. dict - The name and description of the app that is going to be created <br>
-
+<ol>
+<li> int - networkID: The network id of the apps are going to be queried in </li>
+<li> dict - options: The options of the page
+<ol> 
+<li> int - page: The page number of all networks </li>
+<li> int - pageSize: The page size of all networks </li>
+</ol>
+</li>
+</ol>
+ 
 ```python
 
-TubuIO.application.getApps(8, {
-    name: "Sample App"
-    description: "Description of the Sample App"
+TubuIO.application.getAll(8, {
+    page: 1,
+    pageSize: 100
 })
 ```
 
+<br>
+
+**Returns**
+<br>
+<ol>
+<li> array - data : The array of all application dictionaries </li>
+</ol>
+ 
+```python
+
+data = [{'id': 31, 'name': 'Stars', 'description': 'Channel Contract', 'network_id': 2, 'owner_id': 15, ..., ...}, {...},]
+
+```
 <br>
 
 **application.getApp(networkID, appID)**

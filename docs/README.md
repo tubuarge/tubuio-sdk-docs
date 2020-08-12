@@ -63,14 +63,10 @@ Creates an instance to interact with the API
 <br>
 
 **Parameters**
-<br>
- 1. Dictionary <br>
-    - urlbase-String: The URL of the API 
+There is no parameter.
 
 ```python
-tubuio_user =  new TubuIO({
-    urlbase: 'https://api-test.tubu.io'
-})
+tubuio_user =  new TubuIO()
 ```
 
 **TubuIO.login(credentials)**
@@ -81,16 +77,33 @@ Logs in to the API using the username and password
 
 **Parameters**
 <br>
- 1. dict - User credentials stored in dictionary for logging in <br>
+<ol>
+<li>
+ dict - credentials: User credentials stored in dictionary for logging in <br>
+ <ol>
+ <li> string - username: The username of current user</li>
+ <li> string - password: The password of current user</li>
+ </ol>
+ </li>
+ </ol>
 
-```js
+```python
 tubuio_user.login({
     username: 'user1',
     password: 'password1'
 })
 ```
+<br>
 
+**Returns**
+<br>
+<ol>
+<li> string - token: The user token </li>
+</ol>
 
+```python
+token = "askdsakdqıoweıq12314.1313qsodlqkldasnd..."
+```
 
 <!-- tabs:end -->
 
