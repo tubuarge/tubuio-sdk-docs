@@ -352,7 +352,7 @@ TubuIO.contract.delete({
 <br>
 <br>
 
-**contract.update(networkDetails, contractDetails)**
+**contract.update(networkID, shortID, contractDetails)**
 <br>
 The method to update the current user's specific contract on the specific network using the networkID and shortID.
 <br>
@@ -407,7 +407,7 @@ TubuIO.contract.update(
 
 **contract.invoke(shortID, method, args)**
 <br>
-The method to invoke the current user's specific contract on the specific network using the networkID and shortID.
+The method to invoke the current user's specific contract on the specific network using the shortID.
 <br>
 <br>
 
@@ -450,8 +450,8 @@ TubuIO.contract.invoke(
 <br>
 <br>
 
-**contract.call(networkDetails, contractDetails)**
-The method to call the function of the current user's specific contract on the specific network using the networkID and shortID.
+**contract.call(shortID, method, contractDetails)**
+The method to call the function of the current user's specific contract on the specific network using the shortID.
 <br>
 <br>
 
@@ -491,10 +491,9 @@ The method to get the current user's transactions on the specific network using 
 <br>
  1. dict - transactionDetails: The details of the transaction <br>
     1. int - networkID: The network id of the contract is going to be deployed in <br>
-    2. int - appID: The application id of the contract which is going to be deployed in <br>
-    3. string - shortID: The short id of the contract <br>
-    4. int - page: The page number of the transactions <br>
-    5. int - pageSize: The page size of the transactions <br>
+    2. string - shortID: The short id of the contract <br>
+    3. int - page: The page number of the transactions <br>
+    4. int - pageSize: The page size of the transactions <br>
 
 **Returns**
 <br>
@@ -508,7 +507,6 @@ The method to get the current user's transactions on the specific network using 
 ```python
 TubuIO.contract.getTransactions({
     networkID: 2,
-    appID: 3,
     shortID: "sad1231",
     page: 1,
     pageSize: 100

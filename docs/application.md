@@ -192,7 +192,7 @@ The method to get the current user's specific application on the specific networ
 **Parameters**
 <br>
  1. int - networkID: The network id of the specific app which is going to be queried in <br>
- 2. int - applicationID: The ID of the application that is to be queried <br>
+ 2. int - appID: The application id that is to be queried <br>
  
 <br>
 
@@ -231,8 +231,8 @@ The method to update the current user's specific application on the specific net
  1. int - networkID: The network id of the specific app which is going to be updated in <br>
  2. int - applicationID: The ID of the application that is to be updated <br>
  3. dict - updateDetails: The new name and description of the app that is going to be updated <br>
-    1. string - name: The application name which is going to be updated <br>
-    2. string - description: The application description which is going to be updated <br>
+    1. string - name: The new application name which is going to be updated <br>
+    2. string - description: The new application description which is going to be updated <br>
 
 **Returns**
 <br>
