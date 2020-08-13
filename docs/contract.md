@@ -293,18 +293,19 @@ The method to get the current user's specific contract on the specific network u
     1. int - id: The contract id <br>
     2. string - name: The name of the contract <br>
     3. string - description: The description of the contract <br>
-    4. array - abi: Application Binary Interface of the Contract <br>
-    5. dict - args: The arguments of the contract <br>
-    6. dict - metadata: Metadata of the contract <br>
-    7. string - short_id: The short id of the contract <br>
-    8. string - contract-address: The address of the contract <br>
-    9. string - owner_address: The address of the contract owner <br>
-    10. string - owner_privatekey: The private key of the contract owner <br>
-    11. int - application_id: The application id of the contract <br>
-    12. int - network_id: The network id of the contract <br>
-    13. int - owner_id: The id of the contract owner <br>
-    14. string - created_at: The timestamp of the created contract <br>
-    15. string - updated_at: The timestamp of the updated contract <br>
+    4. array - abi: Application Binary Interface of the contract <br>
+    5. string - bytecode: The bytecode of the contract
+    6. dict - args: The arguments of the contract <br>
+    7. dict - metadata: Metadata of the contract <br>
+    8. string - short_id: The short id of the contract <br>
+    9. string - contract-address: The address of the contract <br>
+    10. string - owner_address: The address of the contract owner <br>
+    11. string - owner_privatekey: The private key of the contract owner <br>
+    12. int - application_id: The application id of the contract <br>
+    13. int - network_id: The network id of the contract <br>
+    14. int - owner_id: The id of the contract owner <br>
+    15. string - created_at: The timestamp of the created contract <br>
+    16. string - updated_at: The timestamp of the updated contract <br>
 
 **Example**
 <br>
@@ -374,7 +375,7 @@ The method to update the current user's specific contract on the specific networ
         1. int - id: The contract id <br>
         2. string - name: The name of the contract <br>
         3. string - description: The description of the contract <br>
-        4. array - abi: Application Binary Interface of the Contract <br>
+        4. array - abi: Application Binary Interface of the contract <br>
         5. dict - args: The arguments of the contract <br>
         6. dict - metadata: Metadata of the contract <br>
         7. string - short_id: The short id of the contract <br>
@@ -489,7 +490,7 @@ The method to get the current user's transactions on the specific network using 
 
 **Parameters**
 <br>
- 1. dict - transactionDetails: The details of the transaction <br>
+ 1. dict - transactionDetails: The details of the transactions <br>
     1. int - networkID: The network id of the contract is going to be deployed in <br>
     2. string - shortID: The short id of the contract <br>
     3. int - page: The page number of the transactions <br>
