@@ -153,7 +153,7 @@ Creates a webhook using the webhookDetails.
 
 **Example**
 ```python
-TubuIO.application.create(
+TubuIO.webhook.create(
     webhookDetails={
         name: "Meow",
         description: "Example",
