@@ -189,7 +189,7 @@ The method to get the contract's webhook using the short id of the contract.
 
 ```python
 TubuIO.webhook.getAll(
-    shortID="sadqwe123", 
+    shortID="sadqwe123" 
 )
 
 > [{'id': 39, 'name': 'Meow', 'description': 'Example', 'contract_address': "0xsdwqe1e123asd1", ..., }, {...},]
