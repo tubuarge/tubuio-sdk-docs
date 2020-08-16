@@ -42,6 +42,13 @@ TubuIO.contractAccount.create(shortID='f01bee72e037',
 > {'message': 'Contract Account created', 'data': {'id': 13, 'name': 'Main', 'address': '0xd7e55358Bfb1f...', 'is_active': True, ...}}
 ```
 
+<br>
+
+**Errors**
+<br>
+1. HTTP - 400: Bad Request with Error Message <br>
+2. HTTP - 405: Validation Exception <br>
+
 **contractAddress.getAll(shortID, options)**
 <br>
 The method to get the contract addresses using the short id of the contract.
@@ -79,7 +86,15 @@ TubuIO.contractAccount.getAll(
 > [{'id': 2, 'name': 'Main', 'address': '0xA157d64e25c7b37D42Ea7c2714abE41D7E185a46', 'is_active': True, ...}, {...}, ...]
 
 ```
+
 <br>
+
+**Errors**
+<br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+3. HTTP - 405: Validation Exception <br>
+
 
 **contractAccount.get(shortID, accountID)**
 <br>
@@ -118,7 +133,15 @@ TubuIO.contractAccount.get(
 > {'id': 2, 'name': 'Main', 'address': '...', 'private_key': '...', 'is_active': True, ...}
 
 ```
+
 <br>
+
+**Errors**
+<br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+3. HTTP - 405: Validation Exception <br>
+
 
 
 ### ** Python **
@@ -160,6 +183,13 @@ TubuIO.contractAccount.create(shortID='f01bee72e037',
 > {'message': 'Contract Account created', 'data': {'id': 13, 'name': 'Main', 'address': '0xd7e55358Bfb1f...', 'is_active': True, ...}}
 ```
 
+<br>
+
+**Errors**
+<br>
+1. HTTP - 400: Bad Request with Error Message <br>
+2. HTTP - 405: Validation Exception <br>
+
 **contractAddress.getAll(shortID, options)**
 <br>
 The method to get the contract addresses using the short id of the contract.
@@ -197,7 +227,15 @@ TubuIO.contractAccount.getAll(
 > [{'id': 2, 'name': 'Main', 'address': '0xA157d64e25c7b37D42Ea7c2714abE41D7E185a46', 'is_active': True, ...}, {...}, ...]
 
 ```
+
 <br>
+
+**Errors**
+<br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+3. HTTP - 405: Validation Exception <br>
+
 
 **contractAccount.get(shortID, accountID)**
 <br>
@@ -236,6 +274,14 @@ TubuIO.contractAccount.get(
 > {'id': 2, 'name': 'Main', 'address': '...', 'private_key': '...', 'is_active': True, ...}
 
 ```
+
 <br>
+
+**Errors**
+<br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+3. HTTP - 405: Validation Exception <br>
+
 
 <!-- tabs:end -->

@@ -24,7 +24,11 @@ TubuIO.contract.deploy(8, {
 })
 ```
 <br>
+
+**Errors**
 <br>
+1. HTTP - 400: Error <br>
+2. HTTP - 405: Validation Exception <br>
 
 **contract.getAll(networkID, options)**
 <br>
@@ -47,9 +51,14 @@ TubuIO.contract.getAll(8, {
 ```
 
 <br>
-<br>
 
-**contract.getByShortID(networkID, shortID)**
+**Errors**
+<br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+3. HTTP - 405: Validation Exception <br>
+
+**contract.get(networkID, shortID)**
 <br>
 The method to get the current user's specific contract on the specific network using the networkID and shortID.
 <br>
@@ -67,7 +76,13 @@ TubuIO.contract.getByShortID(2,"sad1231")
 ```
 
 <br>
+
+**Errors**
 <br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+3. HTTP - 405: Validation Exception <br>
+
 
 **contract.delete(networkID, shortID)**
 <br>
@@ -86,7 +101,11 @@ TubuIO.contract.delete(2,"sad1231")
 ```
 
 <br>
+
+**Errors**
 <br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
 
 **contract.update(networkID, shortID, contractDetails)**
 <br>
@@ -108,7 +127,11 @@ TubuIO.contract.update(2,"sad1231",{
 ```
 
 <br>
+
+**Errors**
 <br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
 
 **contract.invoke(shortID, method, args)**
 <br>
@@ -129,7 +152,11 @@ TubuIO.contract.invoke("sad1231","setCount", {
 ```
 
 <br>
+
+**Errors**
 <br>
+1. HTTP - 400: Bad Request with Error Message <br>
+2. HTTP - 405: Invalid Input <br>
 
 **contract.call(shortID, method, args)**
 The method to call the current user's specific contract on the specific network using the networkID and shortID.
@@ -149,7 +176,12 @@ TubuIO.contract.call("sad1231","getCount",{
 ```
 
 <br>
+
+**Errors**
 <br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+3. HTTP - 405: Validation Exception <br>
 
 **contract.getTransactions(transactionDetails)**
 <br>
@@ -171,7 +203,12 @@ TubuIO.contract.getTransactions({
 ```
 
 <br>
+
+**Errors**
 <br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+3. HTTP - 405: Validation Exception <br>
 
 **contract.getTransactionWithHash(transactionHash)**
 <br>
@@ -186,6 +223,14 @@ The method to get the current user's specific transaction using the transaction 
 ```js
 TubuIO.contract.getTransactionWithHash("0xsadasqwe123131")
 ```
+
+<br>
+
+**Errors**
+<br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+3. HTTP - 405: Validation Exception <br>
 
 ### ** Python **
 
@@ -235,7 +280,12 @@ TubuIO.contract.deploy(networkID=8, {
 ```
 
 <br>
+
+**Errors**
 <br>
+1. HTTP - 400: Error <br>
+2. HTTP - 405: Validation Exception <br>
+
 
 **contract.getAll(networkID, pageDetails)**
 <br>
@@ -273,7 +323,13 @@ TubuIO.contract.getAll(8, {
 
 
 <br>
+
+**Errors**
 <br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+3. HTTP - 405: Validation Exception <br>
+
 
 **contract.get(networkID, shortID)**
 <br>
@@ -321,7 +377,13 @@ TubuIO.contract.get(
 ```
 
 <br>
+
+**Errors**
 <br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+3. HTTP - 405: Validation Exception <br>
+
 
 **contract.delete(networkID, shortID)**
 <br>
@@ -351,7 +413,13 @@ TubuIO.contract.delete({
 ```
 
 <br>
+
+**Errors**
 <br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+
+
 
 **contract.update(networkID, shortID, contractDetails)**
 <br>
@@ -404,7 +472,13 @@ TubuIO.contract.update(
 ```
 
 <br>
+
+**Errors**
 <br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+
+
 
 **contract.invoke(shortID, method, args)**
 <br>
@@ -449,7 +523,11 @@ TubuIO.contract.invoke(
 ```
 
 <br>
+
+**Errors**
 <br>
+1. HTTP - 400: Bad Request with Error Message <br>
+2. HTTP - 405: Invalid Input <br>
 
 **contract.call(shortID, method, contractDetails)**
 The method to call the function of the current user's specific contract on the specific network using the shortID.
@@ -480,7 +558,13 @@ TubuIO.contract.invoke(
 ```
 
 <br>
+
+**Errors**
 <br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+3. HTTP - 405: Validation Exception <br>
+
 
 **contract.getTransactions(transactionDetails)**
 <br>
@@ -517,7 +601,13 @@ TubuIO.contract.getTransactions({
 ```
 
 <br>
+
+**Errors**
 <br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+3. HTTP - 405: Validation Exception <br>
+
 
 **contract.getTransaction(transactionHash)**
 <br>
@@ -560,6 +650,13 @@ TubuIO.contract.getTransaction(
 
 > {'message': 'Transaction found', 'data': {'id': 71, 'user_id': 15, 'short_id': 'e6da40e5bc87', ...}}
 ```
+
+**Errors**
+<br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+3. HTTP - 405: Validation Exception <br>
+
 
 
 <!-- tabs:end -->

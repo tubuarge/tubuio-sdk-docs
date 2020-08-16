@@ -27,7 +27,12 @@ TubuIO.network.getAll({
 <br>
 <br>
 
-**network.getByID(networkID)**
+**Errors**
+<br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+
+**network.get(networkID)**
 <br>
 Fetches the network of the user with the given ID 
 <br>
@@ -42,6 +47,15 @@ Fetches the network of the user with the given ID
 TubuIO.network.getByID(14)
 
 ```
+<br>
+
+**Errors**
+<br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+3. HTTP - 405: Validation Exception <br>
+
+
 ### ** Python **
 
 **network.getAll(options)**
@@ -77,6 +91,13 @@ TubuIO.network.getAll(
 > [{'id': 1, 'name': 'Test Quorum Network', 'bctype': 'Quorum', 'consensus': 'raft', ... , 'version': '2.3.0', ...}, {...}, ...]
 
 ```
+
+<br>
+**Errors**
+<br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+
 <br>
 <br>
 
@@ -122,6 +143,11 @@ TubuIO.network.get(
 
 ```
 <br>
+
+**Errors**
 <br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+3. HTTP - 405: Validation Exception <br>
 
 <!-- tabs:end -->

@@ -50,6 +50,11 @@ TubuIO.webhook.create({
 > {'message': 'Webhook created', 'data': {'id': 39, 'name': 'Meow', 'description': 'Example', 'contract_address': "0xsdwqe1e123asd1", ..., }}
 ```
 
+**Errors**
+<br>
+1. HTTP - 400: Bad Request with Error Message <br>
+2. HTTP - 405: Validation Exception <br>
+
 **webhook.getAll(shortID)**
 <br>
 The method to get the contract's webhook using the short id of the contract.
@@ -78,6 +83,12 @@ TubuIO.webhook.getAll("sadqwe123")
 
 ```
 <br>
+
+**Errors**
+<br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+3. HTTP - 405: Validation Exception <br>
 
 **webhook.get(webhookID)**
 <br>
@@ -115,6 +126,12 @@ TubuIO.webhook.get(39)
 
 ```
 <br>
+
+**Errors**
+<br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+3. HTTP - 405: Validation Exception <br>
 
 ### ** Python **
 
@@ -166,6 +183,13 @@ TubuIO.webhook.create(
 > {'message': 'Webhook created', 'data': {'id': 39, 'name': 'Meow', 'description': 'Example', 'contract_address': "0xsdwqe1e123asd1", ..., }}
 ```
 
+<br>
+
+**Errors**
+<br>
+1. HTTP - 400: Bad Request with Error Message <br>
+2. HTTP - 405: Validation Exception <br>
+
 **webhook.getAll(shortID)**
 <br>
 The method to get the contract's webhook using the short id of the contract.
@@ -196,6 +220,12 @@ TubuIO.webhook.getAll(
 
 ```
 <br>
+
+**Errors**
+<br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+3. HTTP - 405: Validation Exception <br>
 
 **webhook.get(webhookID)**
 <br>
@@ -235,5 +265,11 @@ TubuIO.webhook.get(
 
 ```
 <br>
+
+**Errors**
+<br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+3. HTTP - 405: Validation Exception <br>
 
 <!-- tabs:end -->

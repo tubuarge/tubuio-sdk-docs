@@ -54,6 +54,10 @@ TubuIO.login({
 })
 ```
 
+**Errors**
+<br>
+1. HTTP - 400: Bad Request with Error Message <br>
+
 ### ** Python **
 
 **Instance Creation**
@@ -105,6 +109,10 @@ tubuio_user.login(
 
 > "askdsakdqıoweıq12314.1313qsodlqkldasnd..."
 ```
+
+**Errors**
+<br>
+1. HTTP - 400: Bad Request with Error Message <br>
 
 <!-- tabs:end -->
 

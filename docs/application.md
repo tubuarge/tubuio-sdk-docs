@@ -24,6 +24,11 @@ TubuIO.application.create(8, {
 ```
 <br>
 
+**Errors**
+<br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+
 **application.getAll(networkID, options)**
 <br>
 The method to get the current user's applications on the specific network.
@@ -45,6 +50,11 @@ TubuIO.application.getAll(8, {
 
 <br>
 
+**Errors**
+<br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+
 **application.get(networkID, appID)**
 <br>
 The method to get the current user's specific application on the specific network using the networkID and appID.
@@ -62,6 +72,11 @@ TubuIO.application.get(8, 6)
 ```
 
 <br>
+
+**Errors**
+<br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
 
 **application.update(networkID, appID, updateDetails)**
 <br>
@@ -85,6 +100,11 @@ TubuIO.application.update(8, 6, {
 
 <br>
 
+**Errors**
+<br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+
 **application.delete(networkID, appID)**
 <br>
 The method to get the current user's specific application on the specific network using the networkID and appID.
@@ -100,6 +120,11 @@ The method to get the current user's specific application on the specific networ
 
 TubuIO.application.delete(8, 6)
 ```
+
+**Errors**
+<br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
 
 ### ** Python **
 
@@ -144,6 +169,13 @@ TubuIO.application.create(
 
 > {'message': 'Application created', 'data': {'id': 39, 'name': 'Meow', 'description': 'Example', 'network_id': 8, ..., }}
 ```
+<br>
+
+**Errors**
+<br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+
 
 **application.getAll(networkID, options)**
 <br>
@@ -183,6 +215,12 @@ TubuIO.application.getAll(
 ```
 <br>
 
+**Errors**
+<br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+
+
 **application.get(networkID, appID)**
 <br>
 The method to get the current user's specific application on the specific network using the networkID and appID.
@@ -218,6 +256,14 @@ TubuIO.application.get(
 > {'id': 31, 'name': 'Star', 'description': 'Channel', 'network_id': 8, 'owner_id': 15, ...}
 
 ```
+<br>
+
+**Errors**
+<br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+
+
 <br>
 
 **application.update(networkID, appID, updateDetails)**
@@ -265,6 +311,12 @@ TubuIO.application.updateApp(
 
 <br>
 
+**Errors**
+<br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+
+
 **application.delete(networkID, appID)**
 <br>
 The method to delete the current user's specific application on the specific network using the networkID and appID.
@@ -290,5 +342,13 @@ TubuIO.application.delete(
 
 > "The application 6 is deleted successfully."
 ```
+
+<br>
+
+**Errors**
+<br>
+1. HTTP - 400: Error <br>
+2. HTTP - 404: Not Found <br>
+
 
 <!-- tabs:end -->
