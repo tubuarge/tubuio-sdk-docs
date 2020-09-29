@@ -6,16 +6,18 @@
 
 npm install @tubuarge/tubuio
 
-#### ** Python **
+### ** Python **
+Coming Soon
 
-pip install tubuio
+### ** Java **
+Coming Soon
 
 
 <!-- tabs:end -->
 
 ### Usage
 
-Instance creation and user login is required to use the modules of the SDK
+Object creation with ApiKey is required to use the SDK.
 <!-- tabs:start -->
 
 ### ** Javascript **
@@ -28,91 +30,101 @@ Creates an instance to interact with the API
 
 **Parameters**
 <br>
- 1. Object <br>
-    - urlbase-String: The URL of the API 
+
+ 1. **ApiKey** (String) - The Api Key of the contract that is obtained from the TUBUIO UI <br>
+     
 
 ```js
 const TubuIO = require('@tubuarge/tubuio')
-const instance = new TubuIO({
-    urlbase: 'https://api-test.tubu.io'
-})
+const tubu = new TubuIO('API_KEY_OF_THE_CONTRACT');
+
 ```
-
-**TubuIO.login(credentials)**
-<br>
-Logs in to the API using the username and password
-<br>
-<br>
-**Parameters**
-<br>
- 1. Object - User credentials for logging in <br>
-
-```js
-TubuIO.login({
-    username: 'user1',
-    password: 'password1'
-})
-```
-
-**Errors**
-<br>
-1. HTTP - 400: Bad Request with Error Message <br>
-
-### ** Python **
-
-**Instance Creation**
-<br>
-Creates an instance to interact with the API
-<br>
-<br>
-
-**Parameters**
-<br>
-There is no parameter. <br>
-
-**Example**
-<br>
-
-```python
-tubuio_user =  new TubuIO()
-```
-<br>
-
-**TubuIO.login(credentials)**
-<br>
-Logs in to the API using the username and password
-<br>
-<br>
-
-**Parameters**
-<br>
- 1. dict - credentials: User credentials stored in dictionary for logging in <br>
-    1. string - username: The username of current user <br>
-    2. string - password: The password of current user <br>
-
-<br>
-
 **Returns**
 <br>
-1. string - token: The user token <br>
-
+1. Object - The TubuIO object containing Api object.
+<br>
+<br>
 <br>
 
-**Example**
-```python
-tubuio_user.login(
-    credentials={
-        username: 'user1',
-        password: 'password1'
-    }
-)
+**TubuIO.createContract(shortID, api)**
+<br>
+Creates the contract instance to be interacted.
+<br>
+<br>
 
-> "askdsakdqıoweıq12314.1313qsodlqkldasnd..."
+**Parameters**
+<br>
+
+ 1. **ShortID** (String) - The shortID of the contract to be interacted <br>
+ 2. **Api** (Object) (Optional) - The Api object to interact with the contract of the given shortID, default is the object that is created in TubuIO object declaration 
+ <br>
+
+```js
+const basicContract = tubu.createContract('CONTRACT_SHORTID', new Api('API_KEY_OF_THE_CONTRACT'));
+})
 ```
-
-**Errors**
+**Returns**
 <br>
-1. HTTP - 400: Bad Request with Error Message <br>
+1.Object - The Contract object that can be interacted with call or send methods.
+<br>
+<br>
+<br>
+
+**Contract.call(method, args, tag)**
+<br>
+Calls the given call method of the contract's given tag version with given args.
+<br>
+<br>
+
+**Parameters**
+1. **method** (String) - The method name in the contract to be called.
+2. **args** (Array) (Optional)- The parameters of the method to be called in the contract. If method takes no parameters, the default value is null. Note that methods with parameters will not work without arguments.
+3. **tag** (String) (Optional)- The version tag of the contract to be called. If left empty, default contract to be interacted is the latest contract.
+```js
+basicContract
+    .send('addItem', { args: ['xyz', 13, false] })
+    .then((result) => {
+        console.log(result.data);
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+```
+**Returns**
+1. Promise (Object) - A promise object to be resolved.
+<br>
+<br>
+<br>
+
+**Contract.send(method, args, tag)**
+<br>
+Calls the given send method of the contract's given tag version with given args.
+<br>
+<br>
+
+**Parameters**
+1. **method** (String) - The method name in the contract to be called.
+2. **args** (Array) (Optional)- The parameters of the method to be called in the contract. If method takes no parameters, the default value is null. Note that methods with parameters will not work without arguments.
+3. **tag** (String) (Optional)- The version tag of the contract to be called. If left empty, default contract to be interacted is the latest contract.
+```js
+basicContract
+    .send('addItem', { args: ['xyz', 13, false] })
+    .then((result) => {
+        console.log(result.data);
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+```
+**Returns**
+1. Promise (Object) - A promise object to be resolved.
+
+
+### ** Python **
+Coming Soon
+
+### ** Java **
+Coming Soon
 
 <!-- tabs:end -->
 
