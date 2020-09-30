@@ -7,6 +7,12 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+  <link 
+  rel="stylesheet"
+  href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css"
+  title="docsify-darklight-theme"
+  type="text/css"
+/>
 </head>
 <body >
   <div id="app"></div>
@@ -15,14 +21,16 @@
       name: 'TubuIO',
       repo: '',
       logo: './_media/tubuio.svg',
-      search: 'auto', // default
+      search: ['/'],
+      search: 'auto',
 
 // complete configuration parameters
       search: {
         maxAge: 86400000, // Expiration time, the default one day
-        paths: 'auto',
+        paths: '/',
         placeholder: 'Type to search',
         noData: 'No Results!',
+        basePath: '/',
         // Headline depth, 1 - 6
         depth: 6,
         hideOtherSidebarContent: false, // whether or not to hide other sidebar content
@@ -39,6 +47,9 @@
 
 <!-- docsify-tabs (latest v1.x.x) -->
 <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
-
+<script 
+src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"
+type="text/javascript">
+</script>
 </body>
 </html>
