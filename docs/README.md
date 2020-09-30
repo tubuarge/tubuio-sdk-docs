@@ -1,121 +1,21 @@
-# TubuIO SDK Documentation
-## Installation
-<!-- tabs:start -->
+# tubu
 
-#### ** Javascript **
+> Easy blockchain
 
-npm install @tubuarge/tubuio
+## What it is
 
-### ** Python **
-Coming Soon
-
-### ** Java **
-Coming Soon
+Quis in exercitation velit officia enim fugiat ullamco laborum id cupidatat fugiat reprehenderit proident.Id labore laboris ullamco sunt labore.
 
 
-<!-- tabs:end -->
+## Features
 
-### Getting Started
+- Culpa veniam pariatur id tempor eiusmod Lorem.
+- Magna velit et dolor aute elit fugiat laboris nostrud.
+- Pariatur tempor aliqua minim ut anim non do id anim.
+- Eiusmod consequat et ut in occaecat minim dolor occaecat labore consectetur laborum amet.
+- Exercitation qui est consequat adipisicing occaecat tempor consectetur nostrud proident.
+- Adipisicing eiusmod amet labore commodo culpa sunt.
 
-Object creation with ApiKey is required to use the SDK.
-<!-- tabs:start -->
+## Examples
 
-### ** Javascript **
-
-#### Instance Creation
-
-Creates an instance to interact with the API
-
-##### Parameters
-
-- **ApiKey** (String) - The Api Key of the contract that is obtained from the TUBUIO UI <br>
-     
-
-```js
-const TubuIO = require('@tubuarge/tubuio')
-const tubu = new TubuIO('API_KEY_OF_THE_CONTRACT');
-
-```
-##### Returns
-
-- Object - The TubuIO object containing Api object.
-
-
-#### TubuIO.createContract(shortID, api)
-Creates the contract instance to be interacted.
-
-
-##### Parameters
-
-
- - **ShortID** (String) - The shortID of the contract to be interacted
- - **Api** (Object) (Optional) - The Api object to interact with the contract of the given shortID, default is the object that is created in TubuIO object declaration 
-
-
-```js
-const basicContract = tubu.createContract('CONTRACT_SHORTID', new Api('API_KEY_OF_THE_CONTRACT'));
-
-```
-##### Returns
-
-- Object - The Contract object that can be interacted with call or send methods.
-
-
-#### Contract.call(method, args, tag)
-
-Calls the given call method of the contract's given tag version with given args.
-
-
-
-##### Parameters
-- **method** (String) - The method name in the contract to be called.
-- **args** (Array) (Optional)- The parameters of the method to be called in the contract. If method takes no parameters, the default value is null. Note that methods with parameters will not work without arguments.
-- **tag** (String) (Optional)- The version tag of the contract to be called. If left empty, default contract to be interacted is the latest contract.
-```js
-basicContract
-    .send('addItem', { args: ['xyz', 13, false] })
-    .then((result) => {
-        console.log(result.data);
-    })
-    .catch((err) => {
-        console.log(err);
-    });
-```
-##### Returns
-- Promise (Object) - A promise object to be resolved.
-
-
-
-
-#### Contract.send(method, args, tag)
-
-Calls the given send method of the contract's given tag version with given args.
-
-
-
-##### Parameters
-- **method** (String) - The method name in the contract to be called.
-- **args** (Array) (Optional)- The parameters of the method to be called in the contract. If method takes no parameters, the default value is null. Note that methods with parameters will not work without arguments.
-- **tag** (String) (Optional)- The version tag of the contract to be called. If left empty, default contract to be interacted is the latest contract.
-```js
-basicContract
-    .send('addItem', { args: ['xyz', 13, false] })
-    .then((result) => {
-        console.log(result.data);
-    })
-    .catch((err) => {
-        console.log(err);
-    });
-```
-##### Returns
-- Promise (Object) - A promise object to be resolved.
-
-
-### ** Python **
-Coming Soon
-
-### ** Java **
-Coming Soon
-
-<!-- tabs:end -->
-
+Check out the [Showcase](https://tubu.io) to see **tubu.io** in use.

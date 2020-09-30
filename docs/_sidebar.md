@@ -1,6 +1,5 @@
-
-- TubuIO SDK Documentation
-
-  - [Installation](/?id=installation)
-  - [Getting Started](/?id=getting-started)
+- **SDK Docs**
+  - [NodeJS](/node)
+  - [Java](/java)
+  - [Python](/python)
 
