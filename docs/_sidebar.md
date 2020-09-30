@@ -2,5 +2,5 @@
 - TubuIO SDK Documentation
 
   - [Installation](/?id=installation)
-  - [Usage](/?id=usage)
+  - [Getting Started](/?id=getting-started)
 
