@@ -1,3 +1,3 @@
 - Dil
-  - [Türkçe ![](../_media/tr.svg#flag)](/tr/) 
-  - [English ![](../_media/gb.svg#flag)](/)
+  - [Türkçe](/tr/)
+  - [English](/)

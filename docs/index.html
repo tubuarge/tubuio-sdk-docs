@@ -8,35 +8,49 @@
   <meta name="description" content="Documentation of tubu.io">
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
-  <style>
-    a.app-name-link > img {
+  <!-- 1. Theme -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/docsify-themeable/dist/css/theme-simple.css"> -->
+  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css"> -->
+  <link rel="stylesheet" href="https://unpkg.com/docsify-themeable/dist/css/theme-simple-dark.css">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/docsify-themeable/dist/css/theme-defaults.css"> -->
+
+  <!-- 2. PrismJS Themes -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/prism-github/prism-github.css"> -->
+  <link rel="stylesheet" href="https://unpkg.com/prism-theme-one-dark/prism-onedark.css">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/prismjs@1.3.0/themes/prism-tomorrow.css"> -->
+
+<style>
+    a.app-name-link>img {
       max-width: 150px;
       margin-left: 15px;
     }
-    .cover-main > p > img {
+
+    .cover-main>p>img {
       max-height: 75px;
     }
-    body > section.cover {
-      background: linear-gradient(to left bottom, hsl(125, 100%, 85%) 0%,hsl(189, 100%, 85%) 100%)!important;
-    }
+
     section.cover .cover-main>p:last-child a:last-child {
       background-color: #1C73ED;
       border-color: #4187e7;
       color: #fff;
     }
+
     section.cover .cover-main>p:last-child a:last-child:hover {
       background-color: #003b8d;
       border-color: #4187e7;
       color: #fff;
     }
-    img[src$='#flag'] { 
+
+    img[src$='#flag'] {
       width: 20px;
       float: right;
     }
-    .app-nav li ul {
-      min-width: 100px!important;
+
+    .markdown-section {
+      padding: 2rem 30px;
+      max-width: 990px;
     }
+
   </style>
 </head>
 
@@ -64,12 +78,12 @@
         '/': '/',
       },
       loadSidebar: true,
-      subMaxLevel: 4
+      subMaxLevel: 3
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
 </body>
 
 </html>
