@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>tubu.io docs</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
+  <meta name="description" content="Documentation of tubu.io">
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
@@ -27,6 +27,13 @@
         border-color: #4187e7;
         color: #fff;
       }
+      img[src$='#flag'] { 
+        width: 20px;
+        float: right;
+      }
+      .app-nav li ul {
+        min-width: 100px!important;
+      }
     </style>
 </head>
 
@@ -37,26 +44,24 @@
       name: 'TubuIO',
       repo: '',
       logo: './_media/tubuio.svg',
+      loadNavbar: true,
+      coverpage: ['/', '/tr/'],
+      themeColor: '#1C73ED',
+      autoHeader: true,
       search: {
         maxAge: 86400000,
-        paths: [
-        '/',
-        '/node',
-        '/java',
-        '/pyton',
-        ],
         placeholder: 'Type to search',
         noData: 'No Results!',
         basePath: '/',
         depth: 3,
         noData: 'No Results!',
       },
+      nameLink: {
+        '/tr/': '/#/tr/',
+        '/': '/',
+      },
       loadSidebar: true,
-      coverpage: true,
-      subMaxLevel: 4,
-      alias: {
-        '/.*/_sidebar.md': '/_sidebar.md'
-      }
+      subMaxLevel: 4
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
