@@ -3,8 +3,8 @@
 ## Create Instance
 
 ```js
-const TubuIO = require('@tubuarge/tubuio')
-const tubu = new TubuIO('API_KEY_OF_THE_CONTRACT');
+const Tubu = require('@tubuarge/Tubu')
+const tubuApp = new Tubu('API_KEY_OF_AN_APPLICATION');
 ```
 
 #### Parameters
@@ -14,15 +14,17 @@ const tubu = new TubuIO('API_KEY_OF_THE_CONTRACT');
 ## Contract
 
 ```js
-const basicContract = tubu.createContract('CONTRACT_SHORTID', new Api('API_KEY_OF_THE_CONTRACT'));
+const basicContract = tubu.createContract('CONTRACT_SHORTID');
 ```
 
 #### Parameters
 
- - **ShortID** (`String`) - The shortID of the contract to be interacted
- - **Api** (`Object`) (*Optional*) - The Api object to interact with the contract of the given shortID, default is the object that is created in TubuIO object declaration 
+- **ShortID** (`String`) - The shortID of the contract to be interacted
 
-### Contract.call(method, args, tag)
+
+### call
+
+> **basicContract.call(method, args, tag)**
 
 Calls the given call method of the contract's given tag version with given args.
 
@@ -42,20 +44,30 @@ basicContract
         console.log(err);
     });
 ```
+
 #### Returns
 - Promise (`Object`) - A promise object to be resolved.
 
-### Contract.send
+### send
+> **basicContract.send(method, data, tag)**
 
 Calls the given send method of the contract's given tag version with given args.
 
 #### Parameters
 - **method** (`String`) - The method name in the contract to be called.
-- **args** (`Array`) (*Optional*)- The parameters of the method to be called in the contract. If method takes no parameters, the default value is null. Note that methods with parameters will not work without arguments.
+- **data** (`Object`) (*Optional*) - The parameters of the method to be called in the contract. If method takes no parameters, the default value is null. Note that methods with parameters will not work without arguments.
+```js
+// data
+{
+    "args": [], // An array of arguments of the method (Optional)
+    "account": "string" // Sender account address (Optional)
+}
+```
 - **tag** (`String`) (*Optional*)- The version tag of the contract to be called. If left empty, default contract to be interacted is the latest contract.
+
 ```js
 basicContract
-    .send('addItem', { args: ['xyz', 13, false] })
+    .send('addItem', { args: ['xyz', 13, false], account: 'SENDER_ACCOUNT_ADDRESS' }, 'v1.1')
     .then((result) => {
         console.log(result.data);
     })
@@ -63,5 +75,6 @@ basicContract
         console.log(err);
     });
 ```
+
 #### Returns
 - Promise (`Object`) - A promise object to be resolved.
