@@ -1,13 +1,13 @@
 # tubu
 
-> Easy blockchain
+> Kolay blockchain
 
-## What it is
+## Nedir?
 
 Quis in exercitation velit officia enim fugiat ullamco laborum id cupidatat fugiat reprehenderit proident.Id labore laboris ullamco sunt labore.
 
 
-## Features
+## Özellikleri
 
 - Culpa veniam pariatur id tempor eiusmod Lorem.
 - Magna velit et dolor aute elit fugiat laboris nostrud.
@@ -16,6 +16,6 @@ Quis in exercitation velit officia enim fugiat ullamco laborum id cupidatat fugi
 - Exercitation qui est consequat adipisicing occaecat tempor consectetur nostrud proident.
 - Adipisicing eiusmod amet labore commodo culpa sunt.
 
-## Examples
+## Örnekler
 
-Check out the [Showcase](https://tubu.io) to see **tubu.io** in use.
+**tubu.io** kullanım [örneklerine](https://tubu.io) göz atabilirsiniz.
