@@ -14,7 +14,7 @@ const tubuApp = new Tubu('API_KEY_OF_AN_APPLICATION');
 ## Contract
 
 ```js
-const basicContract = tubu.createContract('CONTRACT_SHORTID');
+const basicContract = tubu.contract('CONTRACT_SHORTID');
 ```
 
 #### Parameters
