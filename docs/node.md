@@ -3,8 +3,8 @@
 ## Create Instance
 
 ```js
-const Tubu = require('@tubuarge/Tubu')
-const tubuApp = new Tubu('API_KEY_OF_AN_APPLICATION');
+const Tubu = require('@tubu/tubuio-sdk-node');
+const app = new Tubu('APP_API_KEY');
 ```
 
 #### Parameters
@@ -14,7 +14,7 @@ const tubuApp = new Tubu('API_KEY_OF_AN_APPLICATION');
 ## Contract
 
 ```js
-const basicContract = tubu.contract('CONTRACT_SHORTID');
+const contract = app.contract('CONTRACT_SHORTID');
 ```
 
 #### Parameters
@@ -24,7 +24,7 @@ const basicContract = tubu.contract('CONTRACT_SHORTID');
 
 ### call
 
-> **basicContract.call(method, args, tag)**
+> **contract.call(method, args, tag)**
 
 Calls the given call method of the contract's given tag version with given args.
 
@@ -35,8 +35,8 @@ Calls the given call method of the contract's given tag version with given args.
 - **tag** (`String`) (*Optional*)- The version tag of the contract to be called. If left empty, default contract to be interacted is the latest contract.
 
 ```js
-basicContract
-    .send('addItem', { args: ['xyz', 13, false] })
+contract
+    .call('METHOD_NAME', args = [])
     .then((result) => {
         console.log(result.data);
     })
@@ -49,7 +49,7 @@ basicContract
 - Promise (`Object`) - A promise object to be resolved.
 
 ### send
-> **basicContract.send(method, data, tag)**
+> **contract.send(method, data, tag)**
 
 Calls the given send method of the contract's given tag version with given args.
 
@@ -66,8 +66,8 @@ Calls the given send method of the contract's given tag version with given args.
 - **tag** (`String`) (*Optional*)- The version tag of the contract to be called. If left empty, default contract to be interacted is the latest contract.
 
 ```js
-basicContract
-    .send('addItem', { args: ['xyz', 13, false], account: 'SENDER_ACCOUNT_ADDRESS' }, 'v1.1')
+contract
+    .send('METHOD_NAME', { args: [], account: 'ACCOUNT_ADDRESS' })
     .then((result) => {
         console.log(result.data);
     })
