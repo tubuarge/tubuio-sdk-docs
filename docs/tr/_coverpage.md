@@ -4,9 +4,10 @@
 
 
 > Kolay blockchain.
-- Do quis do ea mollit tempor quis consectetur aute.
-- Consequat do ut eu esse.
-- Doloip excepteur incididunt duis tempor laborum duis dolore.
+
+Blokzinciri geliştirmenin kolay olmadığının farkındayız.
+
+Blokzinciri öğrenme yolculuğuna önceden tanımlanmış ağlarla veya kendi ağınızla başlamak tubu.io ile artık çok kolay.
 
 <p style="margin-bottom: 75px"></p>
 
