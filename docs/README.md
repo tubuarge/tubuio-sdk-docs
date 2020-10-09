@@ -1,21 +1,8 @@
 # tubu
 
-> Easy blockchain
+> **Easy blockchain**
 
-## What it is
+---
 
-Quis in exercitation velit officia enim fugiat ullamco laborum id cupidatat fugiat reprehenderit proident.Id labore laboris ullamco sunt labore.
-
-
-## Features
-
-- Culpa veniam pariatur id tempor eiusmod Lorem.
-- Magna velit et dolor aute elit fugiat laboris nostrud.
-- Pariatur tempor aliqua minim ut anim non do id anim.
-- Eiusmod consequat et ut in occaecat minim dolor occaecat labore consectetur laborum amet.
-- Exercitation qui est consequat adipisicing occaecat tempor consectetur nostrud proident.
-- Adipisicing eiusmod amet labore commodo culpa sunt.
-
-## Examples
-
-Check out the [Showcase](https://tubu.io) to see **tubu.io** in use.
+**tubu.io** is a simple platform where you can manage your blockchain applications. 
+You can deploy and interact with your smart contracts over our **REST API**, **SDK** or **UI APP**.
