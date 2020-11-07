@@ -42,3 +42,4 @@ You can call or invoke the methods in your smart contract via the SDKs. You can 
   - [NodeJS](/node)
   - [Java](/java)
   - [Python](/python)
+  - [Go](/go)
