@@ -1,7 +1,8 @@
 # Golang SDK
 
 ## Get SDK
-`go get github.com/tubuarge/tubuio-sdk-go`
+`go get github.com/tubuarge/tubuio-sdk-go/api`
+`go get github.com/tubuarge/tubuio-sdk-go/util`
 
 
 ## Create Instance
@@ -20,7 +21,7 @@ func main() {
 | APIKey | string |yes|The API Key of the contract that is obtained from [app.tubu.io](https://app.tubu.io) |
 
 
-## Call
+### Call
 
 > **apiStruct.Call(shortID, method, tag, account, args)**
 
@@ -46,9 +47,9 @@ defer callResp.Body.Close()
 ```
 
 #### Returns
-- A **http.Response pointer** from Go's **net/http** package that includes API response and HTTP request response status. See more [Usage Examples](https://github.com/tubuarge/tubuio-sdk-go/tree/main/examples).
+- A **http.Response pointer** from Go's **net/http** package that includes API response as a JSON object that contains data and message. See more [Usage Examples](https://github.com/tubuarge/tubuio-sdk-go/tree/main/examples).
 
-## Send
+### Send
 
 > **apiStruct.Send(shortID, method, tag, account, args)**
 
@@ -73,4 +74,5 @@ defer sendResp.Body.Close()
 ```
 
 #### Returns
-- A **http.Response pointer** from Go's **net/http** package that includes API response and HTTP request response status. See more [Usage Examples](https://github.com/tubuarge/tubuio-sdk-go/tree/main/examples).
+A **http.Response pointer** from Go's **net/http** package that includes API response as a JSON object that contains data and message. See more [Usage Examples](https://github.com/tubuarge/tubuio-sdk-go/tree/main/examples).
+

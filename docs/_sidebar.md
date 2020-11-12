@@ -2,8 +2,6 @@
   - [Create First App](/create-first-app)
   - [Interact with Smart Contract](/interact-smart-contract)
 
-- **SDK Docs**
+- **SDK**
   - [NodeJS](/node)
-  - [Java](/java)
-  - [Python](/python)
   - [Go](/go)
