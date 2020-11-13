@@ -40,6 +40,4 @@ Here you can see the total request number, the versions, the methods, method inp
 You can call or invoke the methods in your smart contract via the SDKs. You can see more information about the SDKs in the links below.
 
   - [NodeJS](/node)
-  - [Java](/java)
-  - [Python](/python)
   - [Go](/go)

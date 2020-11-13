@@ -1,6 +1,4 @@
-- **SDK Docs**
+- **SDK**
   - [NodeJS](/tr/node)
-  - [Java](/tr/java)
-  - [Python](/tr/python)
   - [Go](/tr/go)
 
